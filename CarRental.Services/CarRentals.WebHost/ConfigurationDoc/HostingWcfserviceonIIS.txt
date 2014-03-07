@@ -1,0 +1,8 @@
+﻿
+1.Create the wcf service library(This should be the one where you add the service logic)
+2.create a service library project (for IIS hosting)
+3.Add a reference to the service library
+4.Open the .svc file in teh website and change the  Service="CarRental.WcfServices.CarRentalUserService" to point to the correct service implemenetation class
+5.Get rid of the codebehind attribute.Cuz the implementation is in the service dll project
+6.This is how we map a request to the CarRentalService.svc file to the actual implementation
+7.configure the web.config(By adding the necessary endpoints that u want to expose to the client)
